@@ -27,7 +27,14 @@ module.exports = {
     ],
     'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
     'no-useless-constructor': 'off',
-    'import/extensions': ['error', 'never'],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        mjs: 'always'
+      }
+    ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }],
     'eslint-comments/no-unused-disable': 'error',
